@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>포트폴리오</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="pro.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <nav id="nav">
+            <a href="../index.html" class="logo">메인으로</a>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <p>지하철 잔여좌석 알림 시스템</p>
+                </header>
+                <hr>
+
+                <!-- Text -->
+                <div>
+                    <img class="img" src="images/free-icon-tack-2052642.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 배경</span>
+                </div>
+                <div class="pro_text">
+                    <p>Arduino 센서와 Node.js, DB를 활용한 지하철 잔여좌석 알림 시스템입니다. 지하철을 타고 서서 가던 와중 미리 잔여좌석을 알려주는 시스템이 있으면 좋겠다 싶어 고안해낸 프로젝트입니다.<br> 저 말고도 분명히 지하철을 이용하는 사람들은 한번쯤 자리 찾기 문제를 겪어봤을 것 입니다. 대부분 지상으로 통하는 계단이 있는 곳의 칸이 붐비는 경우가 많고, 계단과 거리가 먼 지하철 칸 일수록 빈 좌석이 많습니다.
+                        그리고 사람이 많이 붐비는 칸에 탄 사람들은 지하철 칸 별로 이동하며 빈 좌석을 찾고는 합니다. 이러한 문제점을 조금이라도 줄이기 위해 지하철의 빈 좌석이 많은 칸을 미리 알려준다면 불필요한 이동을 줄일 수 있고, 한쪽 칸에 사람이 몰리는 현상도 해결 할 수 있을 것 입니다.<br> Arduino를 개별적으로 써봤지만 Python과 통신하여 각 센서를 제어한다는 점과 Node.js를 처음 써본다는 점이
+                        이번 프로젝트의 가장 걸림돌이었습니다. 아무래도 학교에서 배운 것만으로는 한계가 있어 열심히 자문을 구하고 구글링한 결과 완성할 수 있었습니다.<br> 또 처음하는 Node.js를 통해 Get/Post의 역할 및 기본적인 라우팅 구현 방식과 미들웨어 및 Socket.io사용법, EJS가 무엇인지 알게되는 등 많은 배움을 얻어가는 프로젝트였습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-feature-selection-7067972.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 설명</span>
+                </div>
+                <div class="pro_text">
+                    <p>Arduino와 센서(거리감지, 온도) 2개를 사용하여 IoT 하드웨어를 구성하고 IoT 게이트웨이를 설계해 외부 제어 명령에 따라 Serial을 통해 센서 정보를 자동으로 출력합니다.<br> Python 펌웨어를 설계하여 아두이노 펌웨어와 통신해서 Python으로도 제어 명령을 내리면 Arduino가 수집한 센서 정보를 pc에 다시 전달하게끔 개발했습니다.<br> 수집된 센서 정보는 PostgreSQL DB에
+                        저장을 하고 저장된 DB를 가지고 웹 브라우저에 표시를 합니다. 센서는 거리감지 센서를 통해 거리가 10센치 이하면 자리가 있는 것으로 간주하여 빨간색LED가 켜지고, 10센치 이상이면 초록색LED가 켜지지만 거리감지 센서 하나로는 정확성이 떨어집니다. 따라서 온도 센서를 추가하여 사람의 체온이 36도 정도 되는 것을 고려하고 30도 이상 시 자리가 있는 것으로 간주하여 빨간색LED, 그 이하면 초록색LED가
+                        켜집니다.
+                        <br> Arduino 센서 정보를 보여주기 위해 데이터 테이블을 만들고 PostgreSQL과 연동을 하여 필요한 데이터를 가지고 오기도 하며 웹에서 보낼 수도 있게 구성했습니다.<br> RESTfulAPI 서비스 프로젝트이며, express generator를 기반으로 하여 웹 서버의 디렉토리 구조를 보기 쉽게 개발을 하고 JavaScript로 연산된 결과를 기존과 다르게 템플릿 엔진EJS 사용해서 출력했습니다.
+                        또 Socket.io를 사용하여 화면을 갱신 안하고도 실시간 채팅 겸 메모장 역할을 하는 페이지도 구현을 했습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-caution-sign-5983180.png" style="vertical-align:sub;">
+                    <span class="pro">문제 정의</span>
+                </div>
+                <div class="pro_text">
+                    <p>센서 값들을 DB에 넘기고 불러올 때 원할하게 동작되지 않았던 문제가 발생했습니다.
+                        <br> 서버에 오류가 났을때 무슨 오류가 났는지 정확히 파악이 되지 않았습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-idea-bulb-3625060.png" style="vertical-align:sub;">
+                    <span class="pro">문제 해결</span>
+                </div>
+                <div class="pro_text">
+                    <p> DB에 관련 미들웨어를 두고 경로설정과 해당 파일에 렌더링 하고 GET, POST 요청을 처리해주는 라우터를 등록해줬습니다.
+                        <br> error handler를 통해 로컬을 설정하여 개발 시에 오류를 제공을 하고 오류 확인을 위한 HTTP 상태코드도 넣었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-content-2338520.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 기능</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li>IoT 하드웨어 온도, 초음파센서 값 전달.</li>
+                            <li>자리 유무에 따른 LED변화.</li>
+                            <li>전달된 센서값들 DB에 저장.</li>
+                            <li>DB데이터 테이블 웹 사이트 출력.</li>
+                            <li>실시간 채팅용 기능.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-cogwheel-1827888.png" style="vertical-align:sub;">
+                    <span class="pro">사용된 기술 및 언어</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li><strong>IDE</strong> : Eclipse, Visual Studio Code, Jupyter Notebook</li>
+                            <li><strong>언어</strong> : Python, HTML/CSS, JavaScript</li>
+                            <li><strong>프레임워크</strong> : Express</li>
+                            <li><strong>서버</strong> : Node.js, Python HTTP Server</li>
+                            <li><strong>DB</strong> : PostgreSQL</li>
+                            <li><strong>API</strong> : RESTful API</li>
+                            <li><strong>하드웨어</strong> : Arduino</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-algorithms-11079196.png" style="vertical-align: sub;">
+                    <span class="pro">시스템 순서도</span>
+                </div>
+                <div>
+                    <img src="images/rest.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="1250px" height="600px">
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-presentation-1589629.png" style="vertical-align: sub;">
+                    <span class="pro">프로젝트 시연</span>
+                </div>
+                <div>
+                    <img src="images/python.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 10px" width="500px" height="450px">
+                    <img src="images/python2.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="700px" height="450px">
+                    <p>Python과 Arduino를 통신하기 위해 Jupyter Notebook을 사용하여 Arduino 펌웨어와 통신을 하고 여러 센서 정보를 웹 브라우저에 표시가 가능하게끔 Python HTTP Server를 구축합니다.</p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/python3.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 10px" width="500px" height="450px">
+                    <img src="images/python4.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="700px" height="350px">
+                    <p>여러 센서 정보가 DB 테이블에 저장되어 있는 것을 확인할 수 있고 웹 홈페이지에서도 확인이 가능합니다.</p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/node.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 10px" width="650px" height="350px">
+                    <img src="images/node5.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="650px" height="350px">
+                    <p>Python으로 제어해서 얻은 센서 값들을 빼오기 위해 Node.js와 DB를 연동하여 Table값을 json형태로 불러옵니다. </p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/node3.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 10px" width="600px" height="450px">
+                    <img src="images/node4.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="600px" height="350px">
+                    <p>사용자 이름을 입력 후에 실시간 통신을 할 수 있는 기능을 구현했습니다. socket.io를 사용함으로써 데이터를 넣어도 새로 고침 할 필요 없이 해당 페이지는 비동기식으로 작동합니다. </p>
+                </div>
+                <hr>
+
+                <!-- Code -->
+                <div>
+                    <img class="img" src="images/free-icon-programing-4667930.png" style="vertical-align:sub;">
+                    <span class="pro">주요 코드</span>
+                </div>
+                <pre><code>from ProjectServer import ProjectServer
+projectServer = ProjectServer()
+projectServer.initGateway('COM3')
+projectServer.runServer()
+
+def addTemp(self):
+    self.clearOutput()
+        self.printSerial('temp get')
+        while True:
+            if self.isAvailable():
+                break
+        self.appendSerial()
+        try:
+            t = float(self.sOutput.toString())  # 온도센서 정보 출력
+            print('Temperature = ' +str(t))
+            self.tTemp += (t,)        
+            return True 
+        except:
+            print('센서값을 가져오지 못했습니다.')
+            return False
+
+var express = require('express');
+var router = express.Router();
+router.get('/dB', function(req, res, next) {
+    res.render('add', { title: 'Express' });
+    });
+    module.exports = router;            
+
+var socketio = require('socket.io'); // socket.io를 사용하기 위해 모듈을 설치해 준다.
+    // memo라우터를 등록시켜준다. localhost:9000/socket/memo로 웹에 접속 가능하다.
+    router.get('/memo', function(req, res, next) {
+        res.render('memo.ejs', { title: 'Express' });
+    });
+    module.exports = router;            
+					</code></pre>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

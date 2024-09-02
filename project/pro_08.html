@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>포트폴리오</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="pro.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <nav id="nav">
+            <a href="../index.html" class="logo">메인으로</a>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <p>IoT 주차관리 시스템</p>
+                </header>
+                <hr>
+
+                <!-- Text -->
+                <div>
+                    <img class="img" src="images/free-icon-tack-2052642.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 배경</span>
+                </div>
+                <div class="pro_text">
+                    <p>졸업작품으로 하드웨어와 소프트웨어를 결합하여 진행한 IoT 주차관리 시스템입니다. IoT 주차 관리 시스템 프로젝트는 현재 가구당 차량 보유대수의 증가로 인해 무분별한 주차문제가 발생되어 주차갈등과 같은 여러 문제로 뉴스까지 나오는 일들이 많아지고 위반 차량들로 인해 피해를 보고있습니다. 이러한 문제를 줄이고자 주차 문제 해소 프로젝트를 선정하게 되었습니다.<br> 프로젝트의 주요 내용으로는 소방구역 불법 주차
+                        위반 차량의 단속을 중점으로 두고 진행했으며 센서와 카메라 모듈을 이용해서 객체 탐지를 통해 차량만 감지하여 차량 단속 및 번호판 인식 후 서버를 통해 DB로 단속차량의 정보가 넘어가면 전송된 정보를 이용하여 관리자가 조치를 취하는 것으로 진행됩니다.<br> 저는 이 프로젝트에서 하드웨어와 DB부분을 맡았고 각종 센서 및 카메라를 제어하기 위해 Raspberry Pi 그리고 DB는 그동안 한번도 사용해
+                        본 적이 없는 NoSQL인 Mongo DB를 이용했습니다. Raspberry Pi를 처음 이용하다보니 Unix계열의 운영체제가 익숙하지 않아 개발하는데 많은 어려움이 있었지만 구글링을 통해 무사히 마칠 수 있었습니다. 한편으로는 객체 탐지를 사용하기 위해 직접 AI모델을 개발하여 학습을 시키고 적용해보고 싶었지만 주어진 시간과 능력 밖의 문제라 TensorFlow모델을 가져다 사용했습니다. 카메라를 통해
+                        정확히 사물을 구별할 수 있는 능력을 보고 앞으로 AI프로그래밍의 무한한 발전 가능성과 확장성을 체감할 수 있었습니다. 또 항상 매번 DB를 사용할 때 SQL DBMS를 고집부리다 NoSQL을 사용하니 SQL문을 작성하지 않아도 되는 편리함을 느끼고 실제로 사용했다는 점에 의미가 있었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-feature-selection-7067972.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 설명</span>
+                </div>
+                <div class="pro_text">
+                    <p> Raspberry Pi를 이용하여 스피커, 거리감지, 카메라 세개의 센서가 제어 되도록 전체적인 하드웨어 구성을 해줬고 Front-end와 Back-end에 각각 Vue.js와 Node.js(Express)를 활용해 웹을 구축했습니다. 불법 주정차 구역에 차량이 주정차를 할 시 일정시간이 지나면 초음파 센서와 객체 탐지를 통해 차량이 맞는지 판단을 합니다. 차량이 감지 되면 스피커 경고음을 발생하여 경고음으로
+                        인해 운전자가 차량을 이동할 수 있도록 조치를 취합니다. 경고음에도 불구하고 차량이동이 없으면 객체 탐지로 차량 정확도가 85% 이상이 나오는지 확인 후에 설치된 카메라로 번호판을 촬영합니다. 촬영된 번호판은 OpenCV에 의해 번호만 인식되어 서버를 통해 DB로 추출되며 저장이 됩니다. 저장된 번호와 촬영된 날짜 및 위치를 함께 단속반 홈페이지에 나타내고 관리자가 관리 및 정보 확인이 가능하도록 설계했습니다.
+                        그 이후 조치를 취하기 위해 단속반이 App또는 Web으로 정보를 확인해서 불법 주정차 차량에 대한 단속을 시행하게 됩니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-caution-sign-5983180.png" style="vertical-align:sub;">
+                    <span class="pro">문제 정의</span>
+                </div>
+                <div class="pro_text">
+                    <p>하드웨어를 구성하는 부품 중 하나인 카메라 모듈이 Raspberry Pi와 센서 호환이 불가능해 개발 시스템 요구 규격에 맞지 않았습니다.
+                        <br> 차량 용도나 종류에 따라 번호판의 색깔이 달라 색상 기반의 번호판 추출 방법으로 진행하니 인식을 잘 못하는 상황이 발생했습니다.
+                        <br> 균일하지 않은 빛이나 조명 환경에서 촬영된 영상으로 번호판을 인식하니 지저분한 결과가 나왔습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-idea-bulb-3625060.png" style="vertical-align:sub;">
+                    <span class="pro">문제 해결</span>
+                </div>
+                <div class="pro_text">
+                    <p> Raspberry Pi에 최적화 된 카메라 모듈을 찾아서 센서 호환이 가능하도록 만들었습니다.
+                        <br>윤곽선을 기반으로 찾는 방법이 나을 것 같아 findContours로 번호판의 글자에 윤곽선을 잡아주고 원본 이미지에 전처리 과정을 한 후 boundingRect를 활용하여 윤곽선 중 사각형을 찾아 점차적으로 번호판과 가깝다고 생각하는 사각형을 찾았습니다. 위의 과정을 마치고 Pytesseract를 사용하여 문자를 인식하니 잘 됐습니다.
+                        <br>GaussianBlur를 활용하여 이미지 노이즈를 줄이고 adaptiveThreshol로 다른색상 없이 검정색, 흰색으로만 표현하여 컴퓨터가 구별하기 쉽게 조치를 취했습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-content-2338520.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 기능</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li>불법 주정차 차량 거리감지 및 경고음 발생.</li>
+                            <li>객체탐지를 통한 차량 감지 후 카메라 번호판 인식.</li>
+                            <li>단속 및 위치 서비스 앱.</li>
+                            <li>단속 목록 확인을 위한 관리자 홈페이지.</li>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-developer-6478099.png" style="vertical-align: sub;">
+                    <span class="pro">맡은 역할</span>
+                    <p>- 전체 IoT 하드웨어 구성 및 설계</p>
+                    <p>- 영상 데이터 번호판 문자열 처리 </p>
+                    <p>- DB 테이블 구성 및 연동 </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-cogwheel-1827888.png" style="vertical-align:sub;">
+                    <span class="pro">사용된 기술 및 언어</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li><strong>IDE</strong> : Visual Studio, Python 3 IDLE, PyCharm, Android Studio</li>
+                            <li><strong>언어</strong> : JAVA, Python, HTML/CSS, JavaScript</li>
+                            <li><strong>프레임워크</strong> : Express, Vue.js</li>
+                            <li><strong>서버</strong> : Node.js</li>
+                            <li><strong>DB</strong> : MongoDB</li>
+                            <li><strong>AI 라이브러리</strong> : TensorFlow</li>
+                            <li><strong>라이브러리</strong> : Numpy, Pandas, Matplotlib, Open CV, Pytesseract</li>
+                            <li><strong>API</strong> : RESTful API, Google Maps API</li>
+                            <li><strong>하드웨어</strong> : Raspberry Pi</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-technology-10385364.png" style="vertical-align: sub;">
+                    <span class="pro">시스템 구조도</span>
+                </div>
+                <div>
+                    <img src="images/iot.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="1350px" height="1000px">
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-algorithms-11079196.png" style="vertical-align: sub;">
+                    <span class="pro">시퀀스 다이어그램</span>
+                </div>
+                <div>
+                    <img src="images/sequence .png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="1350px" height="700px">
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-presentation-1589629.png" style="vertical-align: sub;">
+                    <span class="pro">프로젝트 시연</span>
+                </div>
+                <div>
+                    <img src="images/number2.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 10px" width="600px" height="550px">
+                    <img src="images/number.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="600px" height="550px">
+                    <p>차량 객치 탐지 및 번호판을 인식 후 점차적으로 번호를 추출하도록 구현했습니다.</p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/number3.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 10px" width="500px" height="400px">
+                    <img src="images/number5.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="800px" height="400px">
+                    <p>단속반 홈페이지의 로그인 화면 및 인식된 번호판 데이터를 포함한 여러 정보를 볼 수 있는 홈페이지입니다.</p>
+                </div>
+                <hr>
+
+                <!-- Code -->
+                <div>
+                    <img class="img" src="images/free-icon-programing-4667930.png" style="vertical-align:sub;">
+                    <span class="pro">주요 코드</span>
+                </div>
+                <pre><code>GPIO.setmode(GPIO.BCM)
+GPIO.setup(triggerPin, GPIO.OUT) #출력
+GPIO.setup(echoPin, GPIO.IN) #입력
+GPIO.setup(pinPiezo, GPIO.OUT)        
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import pytesseract
+import pymongo
+import tensorflow as tf
+
+var express = require('express');
+var router = express.Router();
+var mongoose = require('mongoose');
+var Book = require('../models/Book.js');
+var passport = require('passport');
+require('../config/passport')(passport);
+
+var settings = require('../config/settings');
+require('../config/passport')(passport);
+var jwt = require('jsonwebtoken');
+var User = require("../models/user");
+					</code></pre>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>포트폴리오</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="pro.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <nav id="nav">
+            <a href="../index.html" class="logo">메인으로</a>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <p>뇌졸중 예측 분석</p>
+                </header>
+                <hr>
+
+                <!-- Text -->
+                <div>
+                    <img class="img" src="images/free-icon-tack-2052642.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 배경</span>
+                </div>
+                <div class="pro_text">
+                    <p>AI프로그래밍을 통해 뇌졸중 예측 분석을 진행한 프로젝트입니다. 처음 AI프로그래밍을 배워서 직접 모델 설계까지 개발했으며 csv 데이터 파일을 가지고<br> 데이터의 시각화 및 뇌졸중의 상관관계, 정규화, PCA분석, Keras MLP학습 등 다양한 시도를 할 수 있었습니다.<br> 많고 많은 데이터 중에 어떤 주제로 프로젝트를 해야 할까 고민하다 아무래도 건강 관련 쪽으로 예측이 가능한 프로젝트를 진행하면
+                        좋을 것 같아 뇌졸중 데이터를 가지고 개발을 하게되었습니다. 세계 보건기구(WHO)에 따르면 뇌졸중은 전 세계적으로 두 번째 주요 사망 원인으로 전체 사망의 약 11 %로 높은 비율을 가진다고 합니다. 성별, 연령, 다양한 질병 및 결혼 여부 등과 같은 입력 매개 변수를 기반으로 환자가 뇌졸중에 걸릴 가능성을 예측 합니다. 예측한 데이터를 기반으로 어떤 데이터가 뇌졸중에 영향을 더 끼치는지 확인하여 사전에
+                        뇌졸중을 조금이라도 방지하도록 목표를 선정했습니다.<br> 이 프로젝트를 통해 제가 AI에 관심과 흥미가 생기는 계기가 되었습니다. 각각 데이터를 Train과 Test로 나누어서 분석을 통해 어떤 입력 매개변수가 뇌졸중에 더 관련이 있는지 수치로 표현되는게 신기했고, 다양한 Python 라이브러리에 대해 많은 공부가 되었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-feature-selection-7067972.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 설명</span>
+                </div>
+                <div class="pro_text">
+                    <p>입력 데이터는 10개로써 (성별, 나이, 고혈압, 심장 질환, 결혼 여부, 직업, 거주형태, 혈당수치, 비만도, 흡연 유무) 학습을 통해 어떤 입력 데이터가 뇌졸중과 연관성이 높은지, 얼마나 영향을 미치는지 판단을 합니다. 출력 데이터는 1개 (뇌졸중)이고 0과 1 두 가지의 출력 값을 가지며 뇌졸중의 판단 여부이기 때문에 Binary Classification (이진 분류 문제)를 가집니다.<br> Train데이터와
+                        Test데이터의 비율을 7:3으로 나누어서 Test_set를 만든 후, Histogram을 통해 데이터 불균형 문제가 보이는 그래프들을 확인합니다. 데이터가 한쪽으로 치우치는 Imbalanced Problem(데이터 불균형 문제)이 발생하는 데이터들에 대해 데이터의 개수가 적은 클래스의 표본에 임의의 데이터들을 추가하는 방법 OverSampling처리를 해줘서 진행했습니다.<br> 또 뇌졸중과 상관관계를
+                        분석해 얼마나 관련이 있는지 수치를 확인해보았습니다. 그후 MinMaxScaler모듈을 통해 데이터들을 정규화를 통해 모든 데이터가 같은 정도의(0과 1사이) 스케일로 조정한 후 차원의 저주를 방지하기 위한 PCA분석을 사용해서 몇 개의 차원으로 축소했을 때와 차원 축소 전과의 유사율을 분석했습니다.<br> 마지막으로 Keras MLP모델을 설계하여 각 노드수나 히든층, 활성화 함수 등 조건을 변경하면서
+                        정확도와 손실률을 가지고 가장 적합한 모델을 찾아냅니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-caution-sign-5983180.png" style="vertical-align:sub;">
+                    <span class="pro">문제 정의</span>
+                </div>
+                <div class="pro_text">
+                    <p> AI 모델을 학습시키기 위한 입력 데이터(성별, 결혼여부, 직업, 거주형태, 흡연유무)가 수치가 아닌 문자열로 저장되어있거나 NULL값을 갖는 데이터들에 의해 학습이 불가능 했었습니다.
+                        <br>AI 모델이 좋은 모델이 되려면 데이터 분석에 필요한 뇌졸중 데이터의 양이 충분했어야 했지만 불충분했던 건지 학습이 생각보다 잘나오지 않았던 문제가 발생했습니다.
+                        <br>Histogram를 그려봤는데 적은 데이터 양과 더불어 입력 데이터 값 중에 데이터 불균형이 일어나는 그래프가 나타났습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-idea-bulb-3625060.png" style="vertical-align:sub;">
+                    <span class="pro">문제 해결</span>
+                </div>
+                <div class="pro_text">
+                    <p> 데이터 중에 숫자가 아니거나 NULL값이 있는 데이터들이 존재해서 메소드를 이용해 처리해줬습니다. <br> - fillna 함수를 사용해서 데이터 값이 NULL인 것들을 바꿔줍니다. <br>- size_mapping을 사용해서 문자열 데이터들을 숫자 처리합니다.
+                        <br> 데이터의 개수가 적은 클래스의 표본에 임의의 데이터들을 추가하는 방법인 OverSampling을 사용했으며 그중에서 SMOTE기법을 사용해서 데이터 불균형을 해결했습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-content-2338520.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 기능</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li>Data Histogram.</li>
+                            <li>Scatter Plot.</li>
+                            <li>상관관계.</li>
+                            <li>PCA 분석.</li>
+                            <li>Keras MLP 학습.</li>
+                            <li>Hidden Weight 시각화.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-cogwheel-1827888.png" style="vertical-align:sub;">
+                    <span class="pro">사용된 기술 및 언어</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li><strong>IDE</strong> : Python IDLE, PyCharm</li>
+                            <li><strong>언어</strong> : Python</li>
+                            <li><strong>AI 라이브러리</strong> : Scikit-learn, Keras</li>
+                            <li><strong>라이브러리</strong> : Numpy, Pandas, Matplotlib, Seaborn</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-presentation-1589629.png" style="vertical-align: sub;">
+                    <span class="pro">프로젝트 시연</span>
+                </div>
+                <div>
+                    <img src="images/stroke.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="1000px" height="750px">
+                    <p>stroke와 상관관계를 분석해 얼마나 관련이 있는지 수치를 확인해보았습니다. 상관관계 수가 크게 높은 데이터 값은 없었고 제일 높은 수가 age로 0.2입니다.</p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/accuracy.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 10px" width="500px" height="450px">
+                    <img src="images/loss.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="500px" height="450px">
+                    <p>기본모델을 구현하여 학습률과 손실률을 확인했습니다. 이외에도 여러 파라미터 값들을 수정해서 다양한 모델 설계를 진행했습니다.</p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/weight.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 10px" width="1000px" height="600px">
+                    <p>입력과 은닉층 사이의 학습된 가중치를 시각화했고 행은 10개의 입력 특성에 해당하며 열은 15개의 은닉 유닛 가중치에 해당합니다.</p>
+                </div>
+                <hr>
+
+                <!-- Code -->
+                <div>
+                    <img class="img" src="images/free-icon-programing-4667930.png" style="vertical-align:sub;">
+                    <span class="pro">주요 코드</span>
+                </div>
+                <pre><code>import matplotlib.pyplot as plt
+import numpy as np 
+import pandas as pd
+import seaborn as sns        
+
+X_train, X_test, y_train, y_test = train_test_split(x,y,test_size=0.3)
+X_train = MinMaxScaler().fit_transform(X_train)
+X_test = MinMaxScaler().fit_transform(X_test)
+					</code></pre>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

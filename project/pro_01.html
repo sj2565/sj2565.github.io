@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>포트폴리오</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="pro.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <nav id="nav">
+            <a href="../index.html" class="logo">메인으로</a>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <p>메모장 및 게시판 홈페이지</p>
+                </header>
+                <hr>
+
+                <!-- Text -->
+                <div>
+                    <img class="img" src="images/free-icon-tack-2052642.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 배경</span>
+                </div>
+                <div class="pro_text">
+                    <p>처음 JSP를 배운 후 JAVA와 함께 웹 페이지로 구현한 사용자 메모장 및 게시판 홈페이지입니다.<br> 프로젝트라고 보기에는 미흡하지만 이 프로젝트를 통해 백엔드에 관심이 생겼고 어떤식으로 서버를 구축하며 운영하는지 기초를 다져서 더 큰 프로젝트를 개발하고싶었습니다.
+                        <br>JSP가 어떤 구조로 만들어지고 활용되는지 연습해 보기 위해 개인으로 진행했습니다. <br>간단하면서도 주요 핵심이 들어간 기능을 활용해 보고자 웹 사이트라면 안 쓰일 수가 없는 로그인 기능과 회원가입, DB와의 연동이 들어갔으며 로그인 성공 시 나타나는 메인 홈페이지 화면을 통해 글을 작성할 수 있게 개발했습니다. <br>프로젝트를 진행하면서 객체를 가져오기 위해 사용되는 자바빈 클래스의 Getter,
+                        Setter 및 JSP에서 자바빈을 명시하기 위한 여러 태그 사용 방법과 JSP의 전용 태그와 문법을 알 수 있었고<br> JSP에서 DB와의 연동 방법도 익힐 수 있었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-feature-selection-7067972.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 설명</span>
+                </div>
+                <div class="pro_text">
+                    <p>메모장 홈페이지에 접속하기 전에 로그인을 해야만 볼 수 있도록 설정을 하고 아이다가 없다면 회원가입을 통해 아이디와 비밀번호를 생성할 수 있습니다.<br> 생성된 아이디와 비밀번호를 입력하면 홈페이지에 접속이 가능하고 DB와 연동을 해서 회원 정보를 저장합니다.<br> 접속한 화면에는 INSERT, DELETE, UPDATE기능이 있는 메모판이 나오며 사용자가 쓰고 싶은 기능을 사용하면 됩니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-caution-sign-5983180.png" style="vertical-align:sub;">
+                    <span class="pro">문제 정의</span>
+                </div>
+                <div class="pro_text">
+                    <p>간단한 메모장 홈페이지라 순조롭게 진행될 줄 알았지만 회원가입 부분이 구현이 잘 안되었던 건지 회원가입 진행이 되지 않았던 문제가 있었습니다.<br>DB와의 연동도 문제없이 잘 되었고 테이블 양식에 따라서 작성한 SQL문법에도 에러가 있는지 확인했지만 없었습니다. <br> 이 외에도 자바빈 액션 태그 및 예외 처리 등을 확인해 보았지만 틀리게 썼다거나 오류는 없었습니다.
+                        <br> 예외처리 없이 단순하게 onClick 이벤트를 통해 링크를 설정하는 바람에 로그인을 안하고 URL수정만 해도 메모장 페이지에 접근할 수 있었던 문제가 발생했습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-idea-bulb-3625060.png" style="vertical-align:sub;">
+                    <span class="pro">문제 해결</span>
+                </div>
+                <div class="pro_text">
+                    <p>JAVA에서 DB로 쿼리문을 전송할 때 사용할 수 있는 인터페이스 중 하나인 PreparedStatement를 사용해서 데이터를 전달하려고 했습니다.<br> PreparedStatement는 Statement와 다르게 각각 인수에 대해 위치홀더(placeholder)를 사용하여 SQL 문장을 정의할 수 있지만 위치 홀더에 Column 값을 쓰는 것이 아닌 물음표(?)로 표기해야 하는 것을 모르고 직접 값을 써줘서
+                        오류가 났었습니다. 위치 홀더에 물음표(?)를 써주니 오류가 사라지고 프로그램 동작이 성공적이었습니다. <br> 이번 오류로 PreparedStatement는 Statement랑 다르게 컴파일이 미리 되어있고 더 좋은 성능을 가진 것과 또 특수문자를 자동으로 파싱해 주기 때문에 SQL injection 같은 공격을 막을 수 있어서 보안 쪽으로도 강화되어 있었음을 알 수 있었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-content-2338520.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 기능</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li>로그인 및 회원가입 기능.</li>
+                            <li>DB와의 연동을 통한 데이터 확인 기능.</li>
+                            <li>데이터 삽입, 삭제, 수정 기능.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-cogwheel-1827888.png" style="vertical-align:sub;">
+                    <span class="pro">사용된 기술 및 언어</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li><b>IDE</b> : Eclipse</li>
+                            <li><b>언어</b> : JAVA (JDK 1.8), HTML/CSS, JavaScript</li>
+                            <li><b>서버</b> : JSP, Apache Tomcat 9.0</li>
+                            <li><b>DB</b> : MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-presentation-1589629.png" style="vertical-align: sub;">
+                    <span class="pro">프로젝트 시연</span>
+                </div>
+                <div>
+                    <img src="images/jsp2.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 20px" width="500px" height="350px">
+                    <img src="images/jsp.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="500px" height="350px">
+                    <p>로그인 페이지와 회원가입 페이지입니다.</p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/jsp3.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="800px" height="550px">
+                    <p>로그인 성공 시 작성할 수 있는 메모장 페이지입니다.</p>
+                </div>
+                <hr>
+
+                <!-- Code -->
+                <div>
+                    <img class="img" src="images/free-icon-programing-4667930.png" style="vertical-align:sub;">
+                    <span class="pro">주요 코드</span>
+                </div>
+
+                <pre><code>public String getId() {
+	return id;
+}
+public void setId(String id) {
+	this.id = id;
+}
+
+&lt;jsp:useBean id="memberBean" class="jsp.member.model.MemberBean"/>
+&lt;jsp:setProperty property="*" name="memberBean"/>
+					</code></pre>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>포트폴리오</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="pro.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <nav id="nav">
+            <a href="../index.html" class="logo">메인으로</a>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <p>Coffee SaJo</p>
+                </header>
+                <hr>
+
+                <!-- Text -->
+                <div>
+                    <img class="img" src="images/free-icon-tack-2052642.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 배경</span>
+                </div>
+                <div class="pro_text">
+                    <p>JSP와 JAVA를 활용하여 만든 카페 키오스크 프로젝트입니다.<br> 그동안 배운 JSP 지식으로 조금 더 복잡하고 다양한 기능을 가진 프로젝트를 만들고 싶어서 무엇을 만들면 좋을까 고민하던 차에 <br>키오스크를 웹 페이지로 표현하면 기능도 많이 구현할 수 있고 백엔드 공부가 더 될 것 같아 채택하게 되었습니다.<br> 첫 JSP 개인 프로젝트와 다르게 Dao클래스와 Controller(Servlet)를 개발했으며,
+                        로그인 시 관리자(Admin)도 추가하여 사용자와 다른 기능을 사용하도록 차별을 뒀습니다.<br> 확실히 많은 기능이 들어가다 보니 복잡했지만 실제로 구현해 봄으로써 JSP와 Controller구현 방법에 대해 더 배울 수 있었던 기회가 되었습니다.<br> DB도 테이블 하나만 쓰지 않고 3개의 테이블로 나누어 Foreign Key를 이용하여 데이터를 참조할 수 있도록 설계했습니다.<br> 또 이 프로젝트를
+                        진행하면서 전체적인 디자인 작업도 추가로 맡게 되었었는데 CSS를 직접적으로 배운 적은 없지만 쓰다보니 조금이나마 여러 가지 속성을 적용하는 방법도 알 수 있었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-feature-selection-7067972.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 설명</span>
+                </div>
+                <div class="pro_text">
+                    <p>사용자가 화면을 보고 메뉴 선택을 하면 장바구니에 담기고 주문 목록에 선택한 메뉴들이 입력되어 결제 혹은 삭제가 가능한 일반적인 키오스크 프로젝트입니다.<br> 또 관리자를 만들어서 일반적인 사용자와 다르게 관리자만 카페 메뉴 삭제, 삽입, 수정이 가능하도록 구현했으며 회원 목록을 통해 정보를 삭제할 수 있습니다.
+                        <br> 키오스크 기능을 최대한 구현하려고 노력했고 결제 기능을 뺀 나머지는 성공적으로 개발했습니다.<br>프로젝트를 시작하면 먼저 회원 비회원인지 판단을 합니다. 회원이라면 로그인 페이지로 이동하고, 비회원이라면 회원가입 페이지로 이동하여 정보를 입력 후 로그인 페이지로 넘어갑니다. 정보가 올바르다면 로그인 된 아이디가 관리자인지 판단합니다. 관리자라면 A 알고리즘으로, 회원이라면 B 알고리즘으로 이동하게
+                        됩니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-caution-sign-5983180.png" style="vertical-align:sub;">
+                    <span class="pro">문제 정의</span>
+                </div>
+                <div class="pro_text">
+                    <p>결제 기능 페이지를 구현하려면 Rest API를 통해 Key를 발급받고 개발했어야 했지만 발표일이 얼마 남지 않을뿐더러 어떻게 활용해야 할지 잘 몰랐기에 정상적인 결제 기능을 못 넣었습니다.
+                        <br>저를 포함한 팀원들이 백엔드 포지션이라 CSS와 JavaScript를 유연하게 다를 수 있는 사람이 없었기에 전체적인 디자인 작업에 문제가 있었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-idea-bulb-3625060.png" style="vertical-align:sub;">
+                    <span class="pro">문제 해결</span>
+                </div>
+                <div class="pro_text">
+                    <p>완벽하지 않지만 결제 기능은 DB 테이블 중 사용자 테이블에 임의의 돈 Column을 추가해서 일정 금액을 넣고 결제 시 주문 가격만큼 차감되도록 설계했습니다. <br>Rest API를 활용할 수 있는 기회였지만 그러지 못한 게 아쉬웠습니다.
+                        <br>디자인 부분은 급한 대로 구글링과 영상을 통해 CSS를 미흡하게나 습득해 개발했지만 인라인 방식으로 인해 유지보수가 어려웠고 무엇보다 JavaScript를 쓰지 못해 기능적으로 동적인 홈페이지가 될 수 없었던 게 완성도가 살짝 떨어지는 느낌이었습니다. 두 문제점 전부 완벽하게 해결하지 못해서 이 프로젝트에 대한 미련이 좀 남았었습니다.
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-content-2338520.png" style="vertical-align:sub;">
+                    <span class="pro">프로젝트 기능</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li>로그인 및 회원가입 기능.</li>
+                            <li>DB와의 연동을 통한 메뉴 수정 및 메뉴 주문, 회원 확인 기능.</li>
+                            <li>메뉴 삽입, 삭제, 수정 기능.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-developer-6478099.png" style="vertical-align: sub;">
+                    <span class="pro">맡은 역할</span>
+                    <p>- 사용자의 주문 및 메뉴 화면 기능구현</p>
+                    <p>- DB 연동 작업</p>
+                    <p>- 전체적인 디자인 작업</p>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-cogwheel-1827888.png" style="vertical-align:sub;">
+                    <span class="pro">사용된 기술 및 언어</span>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <ul>
+                            <li><b>IDE</b> : Eclipse, Oracle SQL Developer</li>
+                            <li><b>언어</b> : JAVA (JDK 1.8), HTML/CSS</li>
+                            <li><b>프레임워크</b> : Bootstrap</li>
+                            <li><b>서버</b> : JSP, Apache Tomcat 9.0</li>
+                            <li><b>DB</b> : Oracle DB</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-algorithms-11079196.png" style="vertical-align: sub;">
+                    <span class="pro">User Flow</span>
+                </div>
+                <div>
+                    <img src="images/cafe_00.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="1350px" height="800px">
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-database-storage-2906274.png" style="vertical-align: sub;">
+                    <span class="pro">ERD</span>
+                </div>
+                <div>
+                    <img src="images/ERD.png" style="vertical-align:sub; margin-top : 20px; margin-bottom : 20px " width="800px" height="500px">
+                </div>
+                <hr>
+
+                <div>
+                    <img class="img" src="images/free-icon-presentation-1589629.png" style="vertical-align: sub;">
+                    <span class="pro">프로젝트 시연</span>
+                </div>
+                <div>
+                    <img src="images/coffee1.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 20px" width="600px" height="550px">
+                    <img src="images/coffee2.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="600px" height="550px">
+                    <p>로그인 페이지와 회원가입 페이지입니다.</p>
+                </div>
+                <hr>
+                <div>
+                    <img src="images/coffee3.png" style="vertical-align:sub; margin-top : 20px ; margin-right: 50px; margin-bottom : 20px" width="600px" height="550px">
+                    <img src="images/coffee4.png" style="vertical-align:sub; margin-top : 20px ; margin-bottom : 20px" width="600px" height="550px">
+                    <p>메뉴 주문 페이지 및 상세 보기, 주문 결제 페이지입니다.</p>
+                </div>
+                <hr>
+
+                <!-- Code -->
+                <div>
+                    <img class="img" src="images/free-icon-programing-4667930.png" style="vertical-align:sub;">
+                    <span class="pro">주요 코드</span>
+                </div>
+
+                <pre><code>import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+String gotopage = "/login/signUp.jsp";
+	RequestDispatcher dispatcher = request.getRequestDispatcher(gotopage);
+	dispatcher.forward(request, response);
+
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+
+&lt;%Cafe bean = (Cafe) request.getAttribute("bean");%>
+					</code></pre>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
